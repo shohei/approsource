@@ -1,0 +1,49 @@
+<%= form_for(@format) do |f| %>
+  <% if @format.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@format.errors.count, "error") %> prohibited this format from being saved:</h2>
+
+      <ul>
+      <% @format.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :imput %><br />
+    <%= f.text_field :imput %>
+  </div>
+  <div class="field">
+    <%= f.label :output %><br />
+    <%= f.text_field :output %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br />
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+    <%= f.label :tool %><br />
+    <%= f.text_field :tool %>
+  </div>
+  <div class="field">
+    <%= f.label :operation %><br />
+    <%= f.text_area :operation %>
+  </div>
+  <div class="field">
+    <%= f.label :caution %><br />
+    <%= f.text_area :caution %>
+  </div>
+  <div class="field">
+    <%= f.label :intention %><br />
+    <%= f.text_area :intention %>
+  </div>
+  <div class="field">
+    <%= f.label :customize %><br />
+    <%= f.text_area :customize %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
